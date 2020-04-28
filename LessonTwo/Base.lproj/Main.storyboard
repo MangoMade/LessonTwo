@@ -12,39 +12,39 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LessonTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登陆" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ace-bd-hsW">
-                                <rect key="frame" x="167" y="244" width="80.5" height="48"/>
+                                <rect key="frame" x="167" y="200" width="80.5" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wnC-CI-k3O">
-                                <rect key="frame" x="60" y="374" width="61.5" height="24"/>
+                                <rect key="frame" x="60" y="330" width="61.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="njt-b4-ZD8">
-                                <rect key="frame" x="150" y="369" width="224" height="34"/>
+                                <rect key="frame" x="150" y="325" width="224" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1h6-kC-qpa">
-                                <rect key="frame" x="60" y="438" width="41" height="24"/>
+                                <rect key="frame" x="60" y="394" width="41" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CPD-f4-ytF">
-                                <rect key="frame" x="150" y="433" width="224" height="34"/>
+                                <rect key="frame" x="150" y="389" width="224" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCn-fW-7MI">
-                                <rect key="frame" x="40" y="772" width="334" height="50"/>
+                                <rect key="frame" x="40" y="718" width="334" height="50"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="ouW-mw-61n"/>
@@ -75,6 +75,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="gUJ-qM-tLN"/>
                     <connections>
                         <outlet property="loginButton" destination="eCn-fW-7MI" id="AxG-Y1-2GL"/>
                     </connections>
@@ -140,7 +141,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="去登陆"/>
                                 <connections>
-                                    <action selector="handleToLoginButton:" destination="3iC-Ol-msG" eventType="touchUpInside" id="8GE-YW-lyg"/>
+                                    <action selector="handleToLoginButton:" destination="3iC-Ol-msG" eventType="touchUpInside" id="iZe-cW-Mpb"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,6 +159,7 @@
                     <connections>
                         <outlet property="tableView" destination="sKY-hu-Zl4" id="UmJ-F4-oqg"/>
                         <outlet property="toLoginButton" destination="6QV-Hh-KBh" id="pmw-2b-fvM"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="login" id="oEc-AZ-QLx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cp6-07-gpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

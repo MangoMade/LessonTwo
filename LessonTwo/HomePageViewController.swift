@@ -25,6 +25,8 @@ class HomePageViewController: UIViewController {
     }
     
     @IBAction func handleToLoginButton(_ sender: Any) {
+        performSegue(withIdentifier: "login", sender: sender)
+        /*
         let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
         let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         vc.didLoginCallback = { [weak self] in
@@ -32,6 +34,17 @@ class HomePageViewController: UIViewController {
         }
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true, completion: nil)
+         */
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "login" {
+            let vc = segue.destination as! LoginViewController
+            vc.modalPresentationStyle = .fullScreen
+            vc.didLoginCallback = { [weak self] in
+                self?.isLogined = true
+            }
+        }
     }
 }
 
