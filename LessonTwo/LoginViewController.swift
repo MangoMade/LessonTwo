@@ -12,6 +12,8 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
     
+    var didLoginCallback: (() -> Void)?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +21,8 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func handleLoginButton(_ sender: Any) {
+        didLoginCallback?()
+        dismiss(animated: true, completion: nil)
     }
-    
 }
 

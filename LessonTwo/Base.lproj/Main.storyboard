@@ -10,7 +10,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="LessonTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="LessonTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+            <point key="canvasLocation" x="1906" y="117"/>
         </scene>
         <!--Home Page View Controller-->
         <scene sceneID="dbL-Nk-EXC">
@@ -135,16 +135,30 @@
                                     <outlet property="delegate" destination="3iC-Ol-msG" id="D9o-Fa-6Sa"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QV-Hh-KBh">
+                                <rect key="frame" x="167" y="426" width="80" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="去登陆"/>
+                                <connections>
+                                    <action selector="handleToLoginButton:" destination="3iC-Ol-msG" eventType="touchUpInside" id="8GE-YW-lyg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="sKY-hu-Zl4" firstAttribute="top" secondItem="9tQ-Hc-ZOE" secondAttribute="top" id="6rM-P7-8ly"/>
+                            <constraint firstItem="6QV-Hh-KBh" firstAttribute="centerX" secondItem="fZQ-FC-1yp" secondAttribute="centerX" id="KbV-dH-XP6"/>
                             <constraint firstAttribute="bottom" secondItem="sKY-hu-Zl4" secondAttribute="bottom" id="NQB-QR-l7d"/>
                             <constraint firstItem="sKY-hu-Zl4" firstAttribute="leading" secondItem="9tQ-Hc-ZOE" secondAttribute="leading" id="QIl-GM-YeF"/>
+                            <constraint firstItem="6QV-Hh-KBh" firstAttribute="centerY" secondItem="fZQ-FC-1yp" secondAttribute="centerY" id="Zbd-lt-CyQ"/>
                             <constraint firstItem="9tQ-Hc-ZOE" firstAttribute="trailing" secondItem="sKY-hu-Zl4" secondAttribute="trailing" id="dzv-VV-eeL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9tQ-Hc-ZOE"/>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sKY-hu-Zl4" id="UmJ-F4-oqg"/>
+                        <outlet property="toLoginButton" destination="6QV-Hh-KBh" id="pmw-2b-fvM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cp6-07-gpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,11 +9,29 @@
 import UIKit
 
 class HomePageViewController: UIViewController {
+    
+    @IBOutlet weak var toLoginButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    private var isLogined = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        toLoginButton.isHidden = isLogined
+        tableView.isHidden = !isLogined
+    }
+    
+    @IBAction func handleToLoginButton(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let vc = sb.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        vc.didLoginCallback = { [weak self] in
+            self?.isLogined = true
+        }
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
 
