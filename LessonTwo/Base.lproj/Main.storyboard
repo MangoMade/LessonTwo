@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3iC-Ol-msG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -82,6 +82,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+        <!--Home Page View Controller-->
+        <scene sceneID="dbL-Nk-EXC">
+            <objects>
+                <viewController id="3iC-Ol-msG" customClass="HomePageViewController" customModule="LessonTwo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZQ-FC-1yp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sKY-hu-Zl4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HomePageTableViewCell" rowHeight="80" id="cGU-DC-9Zi" customClass="HomePageTableViewCell" customModule="LessonTwo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cGU-DC-9Zi" id="Xvo-HS-Pk3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nFD-iP-PJv">
+                                                    <rect key="frame" x="10" y="10" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="60" id="3SQ-9C-bSz"/>
+                                                        <constraint firstAttribute="height" constant="60" id="Gei-tU-uiR"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Viv-CP-T7j">
+                                                    <rect key="frame" x="90" y="29.5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Viv-CP-T7j" firstAttribute="leading" secondItem="Xvo-HS-Pk3" secondAttribute="leading" constant="90" id="Ho2-sh-OBZ"/>
+                                                <constraint firstItem="Viv-CP-T7j" firstAttribute="centerY" secondItem="nFD-iP-PJv" secondAttribute="centerY" id="V3M-PN-2kB"/>
+                                                <constraint firstAttribute="bottom" secondItem="nFD-iP-PJv" secondAttribute="bottom" priority="999" constant="10" id="l9p-fA-YBU"/>
+                                                <constraint firstItem="nFD-iP-PJv" firstAttribute="leading" secondItem="Xvo-HS-Pk3" secondAttribute="leading" constant="10" id="ojp-xr-wDu"/>
+                                                <constraint firstItem="nFD-iP-PJv" firstAttribute="top" secondItem="Xvo-HS-Pk3" secondAttribute="top" constant="10" id="r4g-NG-jhX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Viv-CP-T7j" id="h56-EA-xI2"/>
+                                            <outlet property="previewImageView" destination="nFD-iP-PJv" id="4Af-YE-PKs"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3iC-Ol-msG" id="8nV-x7-sGF"/>
+                                    <outlet property="delegate" destination="3iC-Ol-msG" id="D9o-Fa-6Sa"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sKY-hu-Zl4" firstAttribute="top" secondItem="9tQ-Hc-ZOE" secondAttribute="top" id="6rM-P7-8ly"/>
+                            <constraint firstAttribute="bottom" secondItem="sKY-hu-Zl4" secondAttribute="bottom" id="NQB-QR-l7d"/>
+                            <constraint firstItem="sKY-hu-Zl4" firstAttribute="leading" secondItem="9tQ-Hc-ZOE" secondAttribute="leading" id="QIl-GM-YeF"/>
+                            <constraint firstItem="9tQ-Hc-ZOE" firstAttribute="trailing" secondItem="sKY-hu-Zl4" secondAttribute="trailing" id="dzv-VV-eeL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9tQ-Hc-ZOE"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cp6-07-gpE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="984" y="117"/>
         </scene>
     </scenes>
 </document>
